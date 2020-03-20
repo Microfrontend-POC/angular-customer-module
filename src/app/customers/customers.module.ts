@@ -8,15 +8,22 @@ import { SharedModule } from "../shared/shared.module";
 import { CustomerFilterComponent } from "./customer-filter/customer-filter.component";
 import { CustomerRoutingModule } from "./customer-routing.module";
 import { CustomersDetailComponent } from "./customers-detail.component";
+import { CoreModule } from "../core/core.module";
 
 @NgModule({
   declarations: [
     CustomersComponent,
     CustomerListComponent,
     CustomerFilterComponent,
-    CustomersDetailComponent,
+    CustomersDetailComponent
   ],
-  imports: [CommonModule, SharedModule, FormsModule, CustomerRoutingModule],
-  exports: [CustomersComponent],
+  imports: [
+    CommonModule,
+    SharedModule,
+    FormsModule,
+    CustomerRoutingModule,
+    CoreModule
+  ],
+  exports: [CustomersComponent]
 })
 export class CustomersModule {}

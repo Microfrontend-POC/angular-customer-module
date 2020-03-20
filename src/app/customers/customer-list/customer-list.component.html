@@ -13,7 +13,7 @@
     </tr>
     <tr *ngFor="let customer of customerList">
       <td>
-        <a [routerLink]="['/customers/', customer.id]">{{ customer.id }}</a>
+        <a [routerLink]="['/', customer.id]">{{ customer.id }}</a>
       </td>
       <td>{{ customer.userId | currency: currencyCode:"symbol" }}</td>
       <td>{{ customer.title | capitalize }}</td>
